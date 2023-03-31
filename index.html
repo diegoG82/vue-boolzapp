@@ -24,17 +24,66 @@
       <div class="container">
         <div class="left">
           <div class="left-header">
-            <img src="img/avatar_1.jpg" alt="">
-            <span>Sofia</span>
+            <div class="user-leftheader">
+              <img src="img/avatar_io.jpg" alt="" />
+              <span class="header-leftname">Sofia</span>
+            </div>
+            <div class="user-leftfont">
+              <i class="fa-solid fa-circle-notch"></i>
+              <i class="fa-regular fa-message"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </div>
-          <div class="jumbo"></div>
-          <div class="left-search"></div>
-          <div class="people-list"></div>
+          <div class="jumbo">
+            <i class="fa-solid fa-bell-slash"></i>
+            <div class="jumbo-text">
+              <p class="jumbo-text-up">Ricevi notifiche di nuovi messaggi</p>
+              <p class="jumbo-text-bottom">Attiva notifiche desktop</p>
+            </div>
+          </div>
+          <div class="left-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              class="user-search"
+              type="text"
+              placeholder="Cerca o inizia una nuova chat" />
+          </div>
+          <div class="people-list">
+            <div class="user-list" v-for="username in contacts ">
+              <div class="user-actions">
+                <img :src="username.avatar" alt="" />
+                <div>
+                  <p>{{username.name}}</p>
+                  <p>Ultimo messaggio inviato</p>
+                </div>
+                <div class="time-user">12.00</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="right">
-          <div class="right-header"></div>
+          <div class="right-header">
+            <div class="header-user">
+              <img src="img/avatar_1.jpg" alt="" />
+              <div class="user-credentials">
+                <p>Michele</p> 
+                <p>Ultimo accesso oggi alle 12.00</p>
+              </div>
+            </div>
+
+            <div class="right-header-icons">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
           <div class="main-right"></div>
-         <div class="right-footer"></div>
+          <div class="right-footer">
+
+            <div class="left-bottom"><i class="fa-regular fa-face-smile"></i></div>
+            <div class="searchbar"><input class="bottom-searchbar" type="text" placeholder="Scrivi un messaggio"></div>
+            <div class="right-bottom"><i class="fa-solid fa-microphone"></i></div>
+          </div>
         </div>
       </div>
     </div>
@@ -43,3 +92,4 @@
     <script src="js/script.js"></script>
   </body>
 </html>
+  
