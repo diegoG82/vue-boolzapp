@@ -49,7 +49,7 @@
               placeholder="Cerca o inizia una nuova chat" />
           </div>
           <div class="people-list">
-            <div class="user-list" v-for="username in contacts ">
+            <div class="user-list" v-for="username in contacts " @click="showChat(username)">
               <div class="user-actions">
                 <img :src="username.avatar" alt="" />
                 <div>
@@ -64,9 +64,9 @@
         <div class="right">
           <div class="right-header">
             <div class="header-user">
-              <img src="img/avatar_1.jpg" alt="" />
+              <img :src="useravatar" alt="" />
               <div class="user-credentials">
-                <p>Michele</p> 
+                <p>{{nameuser}}</p>
                 <p>Ultimo accesso oggi alle 12.00</p>
               </div>
             </div>
@@ -77,12 +77,26 @@
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
-          <div class="main-right"></div>
+          <div class="main-right">
+            <div class="messages-container">
+              <div class="messages" v-for="usrmessage in messagesUser" :class="usrmessage.status == 'sent' ? 'green' : 'white'">
+                <p>{{usrmessage.message}}</p>
+              </div>
+            </div>
+          </div>
           <div class="right-footer">
-
-            <div class="left-bottom"><i class="fa-regular fa-face-smile"></i></div>
-            <div class="searchbar"><input class="bottom-searchbar" type="text" placeholder="Scrivi un messaggio"></div>
-            <div class="right-bottom"><i class="fa-solid fa-microphone"></i></div>
+            <div class="left-bottom">
+              <i class="fa-regular fa-face-smile"></i>
+            </div>
+            <div class="searchbar">
+              <input
+                class="bottom-searchbar"
+                type="text"
+                placeholder="Scrivi un messaggio" />
+            </div>
+            <div class="right-bottom">
+              <i class="fa-solid fa-microphone"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -92,4 +106,3 @@
     <script src="js/script.js"></script>
   </body>
 </html>
-  
