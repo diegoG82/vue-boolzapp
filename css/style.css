@@ -44,6 +44,8 @@ body {
   width: 30%;
   height: 100%;
   flex-direction: column;
+
+
 }
 
 .left-header {
@@ -51,7 +53,8 @@ body {
   background-color: rgb(234, 234, 234);
   justify-content: space-between;
   border-right: 1px solid lightgrey;
-}
+ 
+  }
 
 .user-leftheader {
   display: flex;
