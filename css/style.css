@@ -134,12 +134,11 @@ body {
   border: 1px solid lightgray;
   padding: 5px;
   min-height: 75px;
-
 }
 
-.user-list :hover{
+.user-list :hover {
   cursor: pointer;
- background-color: rgb(43, 122, 226);
+  background-color: rgb(43, 122, 226);
 }
 
 .user-actions {
@@ -175,19 +174,13 @@ body {
   display: flex;
 }
 
-
-
 .user-credentials {
   display: flex;
   margin-left: 10px;
-justify-content: center;
+  justify-content: center;
 
   flex-direction: column;
 }
-
-
-
-
 
 .right-header-icons {
   display: flex;
@@ -204,7 +197,6 @@ justify-content: center;
 .messages-container {
   width: 1000px;
   height: 700px;
-  /* border: 1px solid black; */
   margin: 0 auto;
   margin-top: 50px;
   overflow-y: auto;
@@ -215,6 +207,8 @@ justify-content: center;
   margin-top: 10px;
   padding: 15px;
   border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .green {
@@ -226,8 +220,13 @@ justify-content: center;
   background-color: white;
 }
 
-.shadow{
-  background-color:rgba(0, 0, 0, 0.7)
+.shadow {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.msg-time{
+  display: flex;
+justify-content: end;
 }
 
 .right-footer {
@@ -246,7 +245,7 @@ justify-content: center;
   width: 10%;
   justify-content: end;
   display: flex;
-} 
+}
 .searchbar {
   width: 80%;
 }

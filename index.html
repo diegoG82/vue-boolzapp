@@ -90,7 +90,7 @@
                 v-for="usrmessage in messagesUser"
                 :class="usrmessage.status == 'sent' ? 'green' : 'white'">
                 <p>{{usrmessage.message}}</p>
-                <p>{{usrmessage.date}}</p>
+                <p class="msg-time">{{usrmessage.date.substring(11).slice(0, -3)}}</p>
               </div>
             </div>
           </div>
