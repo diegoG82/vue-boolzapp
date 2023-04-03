@@ -10,7 +10,6 @@ img {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  background-attachment: fixed;
 }
 
 body {
@@ -126,7 +125,7 @@ body {
   display: flex;
   flex-direction: column;
   height: calc(100% - 170px);
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .user-list {
@@ -135,7 +134,14 @@ body {
   border: 1px solid lightgray;
   padding: 5px;
   min-height: 75px;
+
 }
+
+.user-list :hover{
+  cursor: pointer;
+ background-color: rgb(43, 122, 226);
+}
+
 .user-actions {
   display: flex;
   position: relative;
@@ -168,11 +174,20 @@ body {
 .header-user {
   display: flex;
 }
+
+
+
 .user-credentials {
   display: flex;
+  margin-left: 10px;
+justify-content: center;
 
   flex-direction: column;
 }
+
+
+
+
 
 .right-header-icons {
   display: flex;
@@ -192,6 +207,7 @@ body {
   /* border: 1px solid black; */
   margin: 0 auto;
   margin-top: 50px;
+  overflow-y: auto;
 }
 
 .messages {
@@ -202,12 +218,16 @@ body {
 }
 
 .green {
-  background-color: greenyellow;
+  background-color: limegreen;
   margin-left: 50%;
 }
 
 .white {
   background-color: white;
+}
+
+.shadow{
+  background-color:rgba(0, 0, 0, 0.7)
 }
 
 .right-footer {
@@ -226,7 +246,7 @@ body {
   width: 10%;
   justify-content: end;
   display: flex;
-}
+} 
 .searchbar {
   width: 80%;
 }

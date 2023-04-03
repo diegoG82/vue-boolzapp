@@ -48,9 +48,10 @@
               type="text"
               placeholder="Cerca o inizia una nuova chat" />
           </div>
-          <div class="people-list">
-            <div class="user-list" v-for="username in contacts " @click="showChat(username)">
-              <div class="user-actions">
+          <div class="people-list" >
+            <div class="user-list" v-for="username in contacts " @click="showChat(username)" >
+              <div class="user-actions" 
+                >
                 <img :src="username.avatar" alt="" />
                 <div>
                   <p>{{username.name}}</p>
@@ -87,12 +88,13 @@
           <div class="right-footer">
             <div class="left-bottom">
               <i class="fa-regular fa-face-smile"></i>
-            </div>
+            </div>  
             <div class="searchbar">
-              <input
-                class="bottom-searchbar"
+              <input 
+
+                class="bottom-searchbar" 
                 type="text"
-                placeholder="Scrivi un messaggio" />
+                placeholder="Scrivi un messaggio" ref="newmessage" @keyup.enter="newChatMessage(newmsg)"/>
             </div>
             <div class="right-bottom">
               <i class="fa-solid fa-microphone"></i>

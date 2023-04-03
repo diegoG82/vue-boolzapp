@@ -7,6 +7,7 @@ createApp({
       useravatar: "",
       nameuser: "",
       massagesUser: "",
+      newmessage: "",
 
       contacts: [
         {
@@ -174,12 +175,36 @@ createApp({
     };
   },
 
+  // VISUALIZZAZIONE CHAT A DX
   methods: {
     showChat(user) {
       this.useravatar = user.avatar;
       this.nameuser = user.name;
       this.messagesUser = user.messages;
+
       console.log(user);
+    },
+
+    // AGGIUNTA RIGA DI CHAT A DX (MILESTONE 3)
+    newChatMessage() {
+      let currentDate = new Date().toLocaleString("en-GB");
+
+      const myinput = this.$refs.newmessage.value;
+      console.log(myinput);
+      const myMessage = {
+        date: currentDate,
+        message: myinput,
+        status: "sent",
+      };
+      setTimeout(() => {
+        this.messagesUser.push({
+          date: currentDate,
+          message: "ok",
+          status: "received",
+        });
+      }, 1000);
+
+      this.messagesUser.push(myMessage);
     },
   },
 }).mount("#app");
