@@ -8,8 +8,8 @@ createApp({
       nameuser: "",
       massagesUser: "",
       newmessage: "",
-      messageDate:"",
-      friendsearch:"",
+        // messageDate: "",
+      friendsearch: "",
 
       contacts: [
         {
@@ -183,44 +183,39 @@ createApp({
       this.useravatar = user.avatar;
       this.nameuser = user.name;
       this.messagesUser = user.messages;
-      // this.messageDate = user.date;
-
       console.log(user);
     },
 
     // AGGIUNTA RIGA DI CHAT A DX (MILESTONE 3)
     newChatMessage() {
-      // let currentDate = new Date().toLocaleString("en-GB");
+      let currentDate = new Date().toLocaleString("en-GB");
 
       const myinput = this.$refs.newmessage.value;
       console.log(myinput);
       const myMessage = {
-        // date: currentDate,
+        date: currentDate,
         message: myinput,
         status: "sent",
       };
       setTimeout(() => {
         this.messagesUser.push({
-          // date: currentDate,
+          date: currentDate,
           message: "ok",
           status: "received",
         });
       }, 1000);
 
       this.messagesUser.push(myMessage);
-      this.$refs.newmessage.value =""
+      this.$refs.newmessage.value = "";
     },
 
-    // AGGIUNTA RICERCA DELL'USER (MILESTONE)
+    // AGGIUNTA RICERCA DELL'USER (MILESTONE 4)
 
-    searchFriend(){
-      this.contacts.forEach(elem => {
-       elem.visible = elem.name.toLowerCase().includes(this.friendsearch) 
+    searchFriend() {
+      this.contacts.forEach((elem) => {
+        elem.visible = elem.name.toLowerCase().includes(this.friendsearch);
       });
       console.log(friendsearch);
-
-    }
-
-
+    },
   },
 }).mount("#app");
