@@ -213,7 +213,7 @@ createApp({
 
     searchFriend() {
       this.contacts.forEach((elem) => {
-        elem.visible = elem.name.toLowerCase().includes(this.friendsearch);
+        elem.visible = elem.name.toLowerCase().includes(this.friendsearch) || elem.name.includes(this.friendsearch);
       });
       console.log(friendsearch);
     },
