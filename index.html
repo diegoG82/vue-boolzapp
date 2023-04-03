@@ -46,10 +46,10 @@
             <input
               class="user-search"
               type="text"
-              placeholder="Cerca o inizia una nuova chat" />
+              placeholder="Cerca o inizia una nuova chat" v-model="friendsearch" @keyup="searchFriend"/>
           </div>
           <div class="people-list" >
-            <div class="user-list" v-for="username in contacts " @click="showChat(username)" >
+            <div class="user-list" v-for="username in contacts " @click="showChat(username)" v-show="username.visible" >
               <div class="user-actions" 
                 >
                 <img :src="username.avatar" alt="" />
