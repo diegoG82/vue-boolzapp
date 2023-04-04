@@ -21,27 +21,27 @@
   </head>
   <body>
     <div id="app">
-      <div class="container">
-        <div class="left">
-          <div class="left-header">
-            <div class="user-leftheader">
+      <div class="container flex">
+        <div class="left flex">
+          <div class="left-header flex">
+            <div class="user-leftheader flex">
               <img src="img/avatar_io.jpg" alt="" />
-              <span class="header-leftname">Sofia</span>
+              <span class="header-leftname flex">Sofia</span>
             </div>
-            <div class="user-leftfont">
+            <div class="user-leftfont flex">
               <i class="fa-solid fa-circle-notch"></i>
               <i class="fa-regular fa-message"></i>
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
-          <div class="jumbo">
+          <div class="jumbo flex">
             <i class="fa-solid fa-bell-slash"></i>
             <div class="jumbo-text">
               <p class="jumbo-text-up">Ricevi notifiche di nuovi messaggi</p>
               <p class="jumbo-text-bottom">Attiva notifiche desktop</p>
             </div>
           </div>
-          <div class="left-search">
+          <div class="left-search flex">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input
               class="user-search"
@@ -50,13 +50,13 @@
               v-model="friendsearch"
               @keyup="searchFriend" />
           </div>
-          <div class="people-list">
+          <div class="people-list flex">
             <div
-              class="user-list"
+              class="user-list flex"
               v-for="username in contacts "
               @click="showChat(username)"
               v-show="username.visible">
-              <div class="user-actions">
+              <div class="user-actions flex">
                 <img :src="username.avatar" alt="" />
                 <div>
                   <p>{{username.name}}</p>
@@ -67,36 +67,36 @@
             </div>
           </div>
         </div>
-        <div class="right">
-          <div class="right-header">
-            <div class="header-user">
+        <div class="right flex">
+          <div class="right-header flex">
+            <div class="header-user flex">
               <img :src="useravatar" alt="" />
-              <div class="user-credentials">
+              <div class="user-credentials flex">
                 <p>{{nameuser}}</p>
                 <p>Ultimo accesso oggi alle 12.00</p>
               </div>
             </div>
 
-            <div class="right-header-icons">
+            <div class="right-header-icons flex">
               <i class="fa-solid fa-magnifying-glass"></i>
               <i class="fa-solid fa-paperclip"></i>
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
-          <div class="main-right">
+          <div class="main-right flex">
             <div class="messages-container">
               <div
-                class="messages"
+                class="messages flex"
                 v-for="usrmessage in messagesUser"
                 :class="usrmessage.status == 'sent' ? 'green' : 'white'">
                 <p>{{usrmessage.message}}</p>
-                <p class="msg-time">
+                <p class="msg-time flex">
                   {{usrmessage.date.substring(11).slice(0, -3)}}
                 </p>
               </div>
             </div>
           </div>
-          <div class="right-footer">
+          <div class="right-footer flex">
             <div class="left-bottom">
               <i class="fa-regular fa-face-smile"></i>
             </div>
@@ -108,7 +108,7 @@
                 ref="newmessage"
                 @keyup.enter="newChatMessage(newmsg)" />
             </div>
-            <div class="right-bottom">
+            <div class="right-bottom flex">
               <i class="fa-solid fa-microphone"></i>
             </div>
           </div>
