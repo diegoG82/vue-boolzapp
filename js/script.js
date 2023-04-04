@@ -8,7 +8,6 @@ createApp({
       nameuser: "",
       massagesUser: "",
       newmessage: "",
-      // messageDate: "",
       friendsearch: "",
 
       contacts: [

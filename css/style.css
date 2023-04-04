@@ -5,17 +5,19 @@
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-}
+/* COMMON */
 
 body {
   background: linear-gradient(180deg, #009688 10%, #dadbd4 10%);
   height: 100vh;
   padding-top: 50px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
 
 #app {
@@ -31,8 +33,6 @@ body {
   height: 100%;
 }
 
-/* COMMON */
-
 .avatar {
   border-radius: 25px;
 }
@@ -44,8 +44,6 @@ body {
   width: 30%;
   height: 100%;
   flex-direction: column;
-
-
 }
 
 .left-header {
@@ -53,8 +51,7 @@ body {
   background-color: rgb(234, 234, 234);
   justify-content: space-between;
   border-right: 1px solid lightgrey;
- 
-  }
+}
 
 .user-leftheader {
   display: flex;
@@ -141,7 +138,7 @@ body {
 
 .user-list :hover {
   cursor: pointer;
-  background-color: rgb(43, 122, 226);
+  background-color: rgb(142, 218, 252);
 }
 
 .user-actions {
@@ -185,6 +182,8 @@ body {
   flex-direction: column;
 }
 
+/* RIGHT PART */
+
 .right-header-icons {
   display: flex;
   gap: 10px;
@@ -223,13 +222,9 @@ body {
   background-color: white;
 }
 
-.shadow {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.msg-time{
+.msg-time {
   display: flex;
-justify-content: end;
+  justify-content: end;
 }
 
 .right-footer {
@@ -239,19 +234,23 @@ justify-content: end;
   align-items: center;
   justify-content: space-between;
 }
+
 .left-bottom {
   width: 10%;
   margin-left: 30px;
 }
+
 .right-bottom {
   margin-right: 30px;
   width: 10%;
   justify-content: end;
   display: flex;
 }
+
 .searchbar {
   width: 80%;
 }
+
 .bottom-searchbar {
   width: 100%;
   height: 40px;
