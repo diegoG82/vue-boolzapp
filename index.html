@@ -53,16 +53,18 @@
           <div class="people-list flex">
             <div
               class="user-list flex"
-              v-for="username in contacts "
-              @click="showChat(username)"
-              v-show="username.visible">
+              v-for="element in contacts "
+              @click="showChat(element)"
+              v-show="element.visible">
               <div class="user-actions flex">
-                <img :src="username.avatar" alt="" />
+                <img :src="element.avatar" alt="" />
                 <div>
-                  <p>{{username.name}}</p>
-                  <p>Ultimo messaggio inviato</p>
+                  <p>{{element.name}}</p>
+                  <!-- Ultimo messaggio inviato(dinamico) -->
+                  <p>{{element.messages[element.messages.length -1].message}}</p>
                 </div>
-                <div class="time-user">12.00</div>
+                <!-- Orario dinamico -->
+                <div class="time-user">{{element.messages[element.messages.length -1].date.substring(11).slice(0, -3)}}</div>
               </div>
             </div>
           </div>
@@ -73,7 +75,7 @@
               <img :src="useravatar" alt="" />
               <div class="user-credentials flex">
                 <p>{{nameuser}}</p>
-                <p>Ultimo accesso oggi alle 12.00</p>
+                <p class="user-message">Ultimo accesso oggi alle 12.00</p>
               </div>
             </div>
 

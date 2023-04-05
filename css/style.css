@@ -143,6 +143,10 @@ img {
   width: 100%;
 }
 
+.user-message{
+  padding:1rem;
+}
+
 .time-user {
   position: absolute;
   top: 10px;
@@ -210,6 +214,7 @@ img {
 
 .msg-time {
   justify-content: end;
+  align-items: flex-end;
 }
 
 .right-footer {
